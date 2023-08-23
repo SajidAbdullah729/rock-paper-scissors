@@ -109,7 +109,7 @@ export default function Game() {
       window.localStorage.setItem("phase", "playing");
     }
 
-    if (Number(playerScore) + Number(computerScore) === limit) {
+    if (Number(playerScore) === limit || Number(computerScore) === limit) {
       end();
       window.localStorage.setItem("phase", "ended");
       window.localStorage.setItem("round", 0);
